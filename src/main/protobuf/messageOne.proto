@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package netty.example.message;
+
+//import "google/protobuf/descriptor.proto";
+import "scalapb/scalapb.proto";
+
+message MyMessage {
+    required int32 id = 1;
+    required string name = 2;
+    required MyMessageBodayInfo boday = 3;
+}
+
+message MyMessageBodayInfo {
+    required int64 bodyIdLong = 1;
+    required string bodyMessageString = 2;
+}
